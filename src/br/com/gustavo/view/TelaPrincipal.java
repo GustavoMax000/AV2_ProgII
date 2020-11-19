@@ -29,6 +29,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jMenuBarTelaPrincipal = new javax.swing.JMenuBar();
         jMenuOpcoes = new javax.swing.JMenu();
         jMenuCadastrar = new javax.swing.JMenu();
@@ -40,6 +41,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setTitle("Cadastro usuários");
         setName("frm_tela_principal"); // NOI18N
         setResizable(false);
+
+        jLabel1.setText("teste");
 
         jMenuOpcoes.setText("Opções");
         jMenuOpcoes.addActionListener(new java.awt.event.ActionListener() {
@@ -84,11 +87,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(765, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 579, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 565, Short.MAX_VALUE)
+                .addComponent(jLabel1))
         );
 
         pack();
@@ -155,6 +163,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBarTelaPrincipal;
     private javax.swing.JMenuItem jMenuBusca;
     private javax.swing.JMenu jMenuCadastrar;
