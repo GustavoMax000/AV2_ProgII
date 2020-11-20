@@ -210,7 +210,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         txt_nome.setText("");
         txt_nome.grabFocus();
         txt_idade.setText("");
-        txt_cod.setText("");
+        txt_cod.setText("teste");
     }//GEN-LAST:event_btn_cadastrarActionPerformed
 
     private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
