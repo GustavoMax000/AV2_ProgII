@@ -1,7 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @brief classe genérica para controle e transferencia de dados
+ * @author Daniel Fontoura <fontoura.daniel at hotmail.com>
+ * @author Gustavo Almeida Wong <gustavoalmeidawong at hotmail.com>
+ * @author Roberto Ferreira Torres <roberto.ftorres at hotmail.com>
+ * @author Afonso Vika Lopes <afonsovika at hotmail.com>
+ * @date 06/10/2020
  */
 package br.com.gustavo.model;
 

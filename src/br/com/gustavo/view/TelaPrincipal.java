@@ -1,7 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @brief classe genérica para controle e transferencia de dados
+ * @author Daniel Fontoura <fontoura.daniel at hotmail.com>
+ * @author Gustavo Almeida Wong <gustavoalmeidawong at hotmail.com>
+ * @author Roberto Ferreira Torres <roberto.ftorres at hotmail.com>
+ * @author Afonso Vika Lopes <afonsovika at hotmail.com>
+ * @date 06/10/2020
  */
 package br.com.gustavo.view;
 
@@ -34,7 +37,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuOpcoes = new javax.swing.JMenu();
         jMenuCadastrar = new javax.swing.JMenu();
         jMenuBusca = new javax.swing.JMenuItem();
-        jMenuDelete = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
         jMenuSair = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,10 +69,25 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuOpcoes.add(jMenuCadastrar);
 
         jMenuBusca.setText("Buscar Usuário");
+        jMenuBusca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuBuscaMouseClicked(evt);
+            }
+        });
+        jMenuBusca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuBuscaActionPerformed(evt);
+            }
+        });
         jMenuOpcoes.add(jMenuBusca);
 
-        jMenuDelete.setText("Deletar Usuários");
-        jMenuOpcoes.add(jMenuDelete);
+        jMenu1.setText("Editar");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenuOpcoes.add(jMenu1);
 
         jMenuBarTelaPrincipal.add(jMenuOpcoes);
 
@@ -127,6 +145,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
         new TelaCadastro().setVisible(true);
     }//GEN-LAST:event_jMenuCadastrarMouseClicked
 
+    private void jMenuBuscaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuBuscaMouseClicked
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_jMenuBuscaMouseClicked
+
+    private void jMenuBuscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuBuscaActionPerformed
+        // TODO add your handling code here:
+         new TelaBusca().setVisible(true);
+    }//GEN-LAST:event_jMenuBuscaActionPerformed
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        // TODO add your handling code here:
+        new TelaAlteracao().setVisible(true);
+    }//GEN-LAST:event_jMenu1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -164,10 +197,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBarTelaPrincipal;
     private javax.swing.JMenuItem jMenuBusca;
     private javax.swing.JMenu jMenuCadastrar;
-    private javax.swing.JMenuItem jMenuDelete;
     private javax.swing.JMenu jMenuOpcoes;
     private javax.swing.JMenu jMenuSair;
     // End of variables declaration//GEN-END:variables
