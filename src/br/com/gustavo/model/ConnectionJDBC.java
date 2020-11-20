@@ -33,12 +33,12 @@ public class ConnectionJDBC {
         } catch (Exception ex){
             JOptionPane.showMessageDialog(null, "Erro: "+ ex);
         }
-        try{
-            
-        conn = DriverManager.getConnection(url,user,pass);
-        } catch (Exception e){
-            JOptionPane.showMessageDialog(null,"Erro: " + e);
-        }
-        return conn;
+        //try{
+        //    
+        //conn = DriverManager.getConnection(url,user,pass);
+        //} catch (Exception e){
+        //    JOptionPane.showMessageDialog(null,"Erro: " + e);
+        //}
+        return DriverManager.getConnection(url,user,pass);
     }
 }

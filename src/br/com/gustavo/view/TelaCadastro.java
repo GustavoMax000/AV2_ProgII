@@ -45,6 +45,8 @@ public class TelaCadastro extends javax.swing.JFrame {
         btn_pesquisar = new javax.swing.JButton();
         btn_alterar = new javax.swing.JButton();
         btn_excluir = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
 
         jMenu1.setText("jMenu1");
 
@@ -89,6 +91,16 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         btn_excluir.setText("Excluir");
         btn_excluir.setEnabled(false);
+
+        jMenu3.setText("Sair");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,7 +157,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addComponent(btn_excluir)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_cadastrar)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         pack();
@@ -201,6 +213,14 @@ public class TelaCadastro extends javax.swing.JFrame {
         txt_cod.setText("");
     }//GEN-LAST:event_btn_cadastrarActionPerformed
 
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        // TODO add your handling code here:
+        int res = JOptionPane.showConfirmDialog(null,"Deseja sair?" , "Sair", WIDTH);
+        if (res == JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jMenu3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -248,6 +268,8 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JTextField txt_cod;
     private javax.swing.JTextField txt_idade;
