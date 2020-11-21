@@ -6,10 +6,10 @@
  * @author Afonso Vika Lopes <afonsovika at hotmail.com>
  * @date 06/10/2020
  */
-package br.com.gustavo.model;
+package br.com.unesa.model;
 
-import br.com.gustavo.model.Pessoa;
-import br.com.gustavo.model.ConnectionJDBC;
+import br.com.unesa.model.Pessoa;
+import br.com.unesa.model.ConnectionJDBC;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

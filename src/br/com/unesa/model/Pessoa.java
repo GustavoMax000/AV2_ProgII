@@ -2,7 +2,7 @@
  * Classe criada para podermos realizar a transição dos dados inseridos ou lidos para o banco ou para a saída para o usuário
  * 
  */
-package br.com.gustavo.model;
+package br.com.unesa.model;
 
 /**
  * @brief classe genérica para controle e transferencia de dados
@@ -12,7 +12,7 @@ package br.com.gustavo.model;
  * @author Afonso Vika Lopes <afonsovika at hotmail.com>
  * @date 06/10/2020
  */
-import br.com.gustavo.model.PessoaDAO;
+import br.com.unesa.model.PessoaDAO;
 
 public class Pessoa {
     public String cod;

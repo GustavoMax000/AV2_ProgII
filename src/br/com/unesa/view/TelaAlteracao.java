@@ -6,9 +6,9 @@
  * @author Afonso Vika Lopes <afonsovika at hotmail.com>
  * @date 06/10/2020
  */
-package br.com.gustavo.view;
-import br.com.gustavo.model.Pessoa;
-import br.com.gustavo.control.PessoaController;
+package br.com.unesa.view;
+import br.com.unesa.model.Pessoa;
+import br.com.unesa.control.PessoaController;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 /**
@@ -50,6 +50,7 @@ public class TelaAlteracao extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Alteração");
 
         btn_alterar.setText("Alterar");
         btn_alterar.addActionListener(new java.awt.event.ActionListener() {
@@ -74,6 +75,11 @@ public class TelaAlteracao extends javax.swing.JFrame {
         jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jMenu1MouseClicked(evt);
+            }
+        });
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
             }
         });
         jMenuBar1.add(jMenu1);
@@ -144,6 +150,7 @@ public class TelaAlteracao extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_alterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_alterarActionPerformed
@@ -172,8 +179,13 @@ public class TelaAlteracao extends javax.swing.JFrame {
 
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
         // TODO add your handling code here:
-        System.exit(1);
+       this.dispose();
     }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jMenu1ActionPerformed
 
     /**
      * @param args the command line arguments

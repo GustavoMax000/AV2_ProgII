@@ -6,10 +6,10 @@
  * @author Afonso Vika Lopes <afonsovika at hotmail.com>
  * @date 06/10/2020
  */
-package br.com.gustavo.control;
-import br.com.gustavo.model.ExceptionDAO;
-import br.com.gustavo.model.Pessoa;
-import br.com.gustavo.model.PessoaDAO;
+package br.com.unesa.control;
+import br.com.unesa.model.ExceptionDAO;
+import br.com.unesa.model.Pessoa;
+import br.com.unesa.model.PessoaDAO;
 import java.sql.SQLException;
 import java.util.List;
 /**

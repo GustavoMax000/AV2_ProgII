@@ -6,7 +6,7 @@
  * @author Afonso Vika Lopes <afonsovika at hotmail.com>
  * @date 06/10/2020
  */
-package br.com.gustavo.view;
+package br.com.unesa.view;
 
 import javax.swing.JOptionPane;
 
@@ -32,20 +32,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jMenuBarTelaPrincipal = new javax.swing.JMenuBar();
         jMenuOpcoes = new javax.swing.JMenu();
-        jMenuCadastrar = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuBusca = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuSair = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro usuários");
         setName("frm_tela_principal"); // NOI18N
         setResizable(false);
-
-        jLabel1.setText("teste");
 
         jMenuOpcoes.setText("Opções");
         jMenuOpcoes.addActionListener(new java.awt.event.ActionListener() {
@@ -54,19 +52,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jMenuCadastrar.setText("Cadastrar Usuário");
-        jMenuCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuCadastrar.addMouseListener(new java.awt.event.MouseAdapter() {
+        jMenuItem1.setText("Cadastrar");
+        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenuCadastrarMouseClicked(evt);
+                jMenuItem1MouseClicked(evt);
             }
         });
-        jMenuCadastrar.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuCadastrarActionPerformed(evt);
+                jMenuItem1ActionPerformed(evt);
             }
         });
-        jMenuOpcoes.add(jMenuCadastrar);
+        jMenuOpcoes.add(jMenuItem1);
 
         jMenuBusca.setText("Buscar Usuário");
         jMenuBusca.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -81,13 +78,31 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuOpcoes.add(jMenuBusca);
 
-        jMenu1.setText("Editar");
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jMenuItem3.setText("Alterar");
+        jMenuItem3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu1MouseClicked(evt);
+                jMenuItem3MouseClicked(evt);
             }
         });
-        jMenuOpcoes.add(jMenu1);
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenuOpcoes.add(jMenuItem3);
+
+        jMenuItem2.setText("Listar");
+        jMenuItem2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem2MouseClicked(evt);
+            }
+        });
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenuOpcoes.add(jMenuItem2);
 
         jMenuBarTelaPrincipal.add(jMenuOpcoes);
 
@@ -105,16 +120,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(765, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap())
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 565, Short.MAX_VALUE)
-                .addComponent(jLabel1))
+            .addGap(0, 579, Short.MAX_VALUE)
         );
 
         pack();
@@ -135,19 +145,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jMenuOpcoesActionPerformed
 
-    private void jMenuCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastrarActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jMenuCadastrarActionPerformed
-
-    private void jMenuCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuCadastrarMouseClicked
-        // TODO add your handling code here:
-        new TelaCadastro().setVisible(true);
-    }//GEN-LAST:event_jMenuCadastrarMouseClicked
-
     private void jMenuBuscaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuBuscaMouseClicked
         // TODO add your handling code here:
-       
+       new TelaListagem().setVisible(true);
     }//GEN-LAST:event_jMenuBuscaMouseClicked
 
     private void jMenuBuscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuBuscaActionPerformed
@@ -155,10 +155,35 @@ public class TelaPrincipal extends javax.swing.JFrame {
          new TelaBusca().setVisible(true);
     }//GEN-LAST:event_jMenuBuscaActionPerformed
 
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+    private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
+        // TODO add your handling code here:
+        new TelaCadastro().setVisible(true);
+    }//GEN-LAST:event_jMenuItem1MouseClicked
+
+    private void jMenuItem2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem2MouseClicked
+        // TODO add your handling code here:
+        new TelaListagem().setVisible(true);
+    }//GEN-LAST:event_jMenuItem2MouseClicked
+
+    private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
         // TODO add your handling code here:
         new TelaAlteracao().setVisible(true);
-    }//GEN-LAST:event_jMenu1MouseClicked
+    }//GEN-LAST:event_jMenuItem3MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        new TelaCadastro().setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        new TelaAlteracao().setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        new TelaListagem().setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,11 +221,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBarTelaPrincipal;
     private javax.swing.JMenuItem jMenuBusca;
-    private javax.swing.JMenu jMenuCadastrar;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenu jMenuOpcoes;
     private javax.swing.JMenu jMenuSair;
     // End of variables declaration//GEN-END:variables
